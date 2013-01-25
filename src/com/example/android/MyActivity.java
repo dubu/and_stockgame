@@ -75,7 +75,6 @@ public class MyActivity extends Activity {
         });
 
 
-        //this.mWebivew.setWebChromeClient(new WebChromeClient());
 
     }
 
