@@ -1,12 +1,9 @@
 package com.example.android;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -43,19 +40,19 @@ public class MyActivity extends Activity {
         Log.d("density", "screenDensity : " + screenDensity);
 
 
-        if (screenDensity == 240) {
-
-            mWebivew.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
-
-        } else if (screenDensity == 160) {
-
-            mWebivew.getSettings().setDefaultZoom(WebSettings.ZoomDensity.MEDIUM);
-
-        } else if (screenDensity == 120) {
-
-            mWebivew.getSettings().setDefaultZoom(WebSettings.ZoomDensity.CLOSE);
-
-        }
+//        if (screenDensity == 240) {
+//
+//            mWebivew.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
+//
+//        } else if (screenDensity == 160) {
+//
+//            mWebivew.getSettings().setDefaultZoom(WebSettings.ZoomDensity.MEDIUM);
+//
+//        } else if (screenDensity == 120) {
+//
+//            mWebivew.getSettings().setDefaultZoom(WebSettings.ZoomDensity.CLOSE);
+//
+//        }
 
         mWebivew.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
 
@@ -63,7 +60,6 @@ public class MyActivity extends Activity {
         mWebivew.loadUrl("http://stock.abyang.com");
         mWebivew.getSettings().setSupportMultipleWindows(true);
         mWebivew.getSettings().setJavaScriptEnabled(true);
-
 
         this.mWebivew.setWebViewClient(new WebViewClient() {
 
